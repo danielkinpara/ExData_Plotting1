@@ -2,7 +2,7 @@
 #
 # This code plots the histogram of Global Active Power. It opens the data file
 # "household_power_consumption.txt" and loads the data of February 1st and 2nd, 2007,
-# of the  the variabel "Global_active_power". The output is the histogram of this
+# of the  the variable "Global_active_power". The output is the histogram of this
 # variable as a PNG file named "plot1.png".
 #
 # The "plot1.R" must be placed in the same folder where the data file is. The PNG file
