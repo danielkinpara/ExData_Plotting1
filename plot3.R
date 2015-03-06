@@ -38,21 +38,28 @@ y3 <- tabela$Sub_metering_3
 ## were chosen in order to let the PNG file looks like the figures showed in
 ## README.md file.
 
-par(mar = c(4,8,4,6), cex.lab = 0.8, cex.axis = 0.8)
+par(mar = c(4,5,4,4), cex.lab = 0.8, cex.axis = 0.8)
 
 ## It plots the line graphic. Label of the axis X were assigned blank. Otherwise,
-## the letter "X" shows as label. It has to be added blank spaces after the
-## variables names in order to adjust the lenged position in the PNG file.
+## the letter "X" shows as label.
 
 plot(x, y1, type = "l", ylab = "Energy sub metering", xlab = "")
 lines(x, y2, col = "red")
 lines(x, y3, col = "blue")
 legend("topright", col = c("black", "red", "blue"), 
-       legend = c("Sub_metering_1     ", "Sub_metering_2     ", "Sub_metering_3     "), 
-       cex = 0.8, lty = 1)
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
+       cex = 0.8, lty = 1, seg.len = 2)
 
 
-## It saves the current device to the file "plot3.png".
+## It saves the graphic into the file "plot3.png". I had to plot it again
+## in order to avoid the difference between the ppi in my monitor and
+## the ppi of a 480x480 PNG file.
 
-dev.copy(png, file = "plot3.png", width = 640, height = 480)
+png("plot3.png", width = 480, height = 480)
+plot(x, y1, type = "l", ylab = "Energy sub metering", xlab = "")
+lines(x, y2, col = "red")
+lines(x, y3, col = "blue")
+legend("topright", col = c("black", "red", "blue"), 
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
+       cex = 0.8, lty = 1, seg.len = 2)
 dev.off()
