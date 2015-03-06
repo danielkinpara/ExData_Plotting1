@@ -2,7 +2,7 @@
 #
 # This code plots the line grapihc of Global Active Power. It opens the data file
 # "household_power_consumption.txt" and loads the data of February 1st and 2nd, 2007,
-# of the  the variable "Global_active_power". The output is the graphic of this
+# of the variable "Global_active_power". The output is the graphic of this
 # variable as a PNG file named "plot2.png".
 #
 # The "plot2.R" must be placed in the same folder where the data file is. The PNG file
@@ -45,7 +45,7 @@ par(mar = c(4,6,4,2), cex.lab = 0.9, cex.axis = 0.9)
 plot(x, y, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 
-## It saves the current device to the file "plot1.png".
+## It saves the current device to the file "plot2.png".
 
 dev.copy(png, file = "plot2.png")
 dev.off()
