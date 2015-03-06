@@ -47,5 +47,5 @@ plot(x, y, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 ## It saves the current device to the file "plot2.png".
 
-dev.copy(png, file = "plot2.png")
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off()
