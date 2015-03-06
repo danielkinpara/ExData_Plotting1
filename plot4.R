@@ -79,5 +79,5 @@ plot(x, y, type = "l", ylab = "Global Reactive Power", xlab = "datetime")
 
 ## It saves the current device to the file "plot4.png".
 
-dev.copy(png, file = "plot4.png")
+dev.copy(png, file = "plot4.png", width = 480, height = 480)
 dev.off()
