@@ -38,5 +38,5 @@ hist(tabela$Global_active_power, xlab = "Global Active Power (kilowatts)",
 
 ## It saves the current device to the file "plot1.png".
 
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png", width = 480, height = 480)
 dev.off()
